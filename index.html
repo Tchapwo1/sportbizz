@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SportBizz | Real-Time Sports News & Updates</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display transition-colors duration-300">
+    <!-- Sticky Header -->
+    <header class="sticky top-0 z-50 bg-white dark:bg-background-dark border-b border-slate-200 dark:border-primary/20 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo & Nav -->
+                <div class="flex items-center gap-8">
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+                            <span class="material-icons text-white text-xl">sports_score</span>
+                        </div>
+                        <span class="text-2xl font-800 tracking-tight text-primary">SPORT<span class="text-slate-900 dark:text-white">BIZZ</span></span>
+                    </div>
+                    <nav class="hidden md:flex space-x-6">
+                        <a class="text-primary font-semibold border-b-2 border-primary pb-1" href="#">Home</a>
+                        <a class="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" href="#">Scores</a>
+                        <a class="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" href="#">Teams</a>
+                        <a class="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" href="#">Video</a>
+                        <a class="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" href="#">Podcasts</a>
+                    </nav>
+                </div>
+                <!-- Search & Profile -->
+                <div class="flex items-center gap-4">
+                    <div class="relative">
+                        <span class="material-icons absolute left-3 top-2 text-slate-400 text-lg">search</span>
+                        <input class="pl-10 pr-4 py-1.5 rounded-full bg-slate-100 dark:bg-card-dark border-none focus:ring-2 focus:ring-primary w-64 text-sm" placeholder="Search athletes, teams..." type="text"/>
+                    </div>
+                    <button class="flex items-center justify-center w-10 h-10 rounded-full bg-slate-100 dark:bg-card-dark text-slate-600 dark:text-slate-300">
+                        <span class="material-icons">person</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breaking News Ticker -->
+    <div class="bg-primary/10 dark:bg-primary/5 border-b border-primary/20 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center gap-4">
+            <span class="bg-accent-orange text-white text-xs font-bold px-2 py-1 rounded uppercase flex-shrink-0">Breaking</span>
+            <div class="flex-1 overflow-hidden whitespace-nowrap relative">
+                <div class="inline-block animate-pulse">
+                    <span class="text-sm font-medium mr-8">• Lakers secure playoff spot after double OT thriller against Warriors</span>
+                    <span class="text-sm font-medium mr-8">• Transfer Talk: Mbappe clarifies future amidst Madrid rumors</span>
+                    <span class="text-sm font-medium mr-8">• NFL Draft: Quarterback sweep expected in top 3 picks</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div class="grid grid-cols-12 gap-6">
+            <!-- Main Content Area -->
+            <div class="col-span-12 lg:col-span-9 space-y-6">
+                <!-- Hero Section & Trending -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Hero Main Story -->
+                    <div class="md:col-span-2 relative h-[450px] rounded-xl overflow-hidden group">
+                        <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBf4O0nQw8kDZurD74M5tBudzRRWAk7My0ZQOlqAcwefr5-RXZHmLpGwZ20BQ30fPQDkPFD7zDPl0imWXHUtVAp5vlNXlmCGbsn0-y0BoKN20BDt1AV6cl5QRdwNbYGsELIuoHOjAvRkpNYhv8EIJmnAEc6LGCTWjNuT09r2mmeH1n3MwrOGkjvKwJKe1XOchzTyF1pUcLcUiEY3ggU_i0TAZDYpKrvjcFsVl6VxjvDdkaodd6cPqvDg_bcdimBbEdTI7Bx6QE95rCY" alt="Intense basketball game action during final seconds"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-8 w-full">
+                            <span class="inline-block bg-primary text-white text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-wider">Top Story</span>
+                            <h1 class="text-4xl font-extrabold text-white leading-tight mb-4">Draft Night: The Biggest Surprises from Round 1</h1>
+                            <p class="text-slate-200 text-lg mb-6 line-clamp-2">In a night filled with unexpected trades and bold quarterback picks, the 2024 draft has reshaped the league's landscape in ways no analyst predicted.</p>
+                            <button class="bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-8 rounded-lg transition-all flex items-center gap-2">
+                                Read Full Coverage <span class="material-icons text-sm">arrow_forward</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Trending News Sidebar (Center) -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-bold flex items-center gap-2 border-b border-slate-200 dark:border-primary/20 pb-2">
+                            <span class="material-icons text-primary">trending_up</span> Trending Now
+                        </h3>
+                        <div class="space-y-4">
+                            <!-- Trending Item 1 -->
+                            <div class="group cursor-pointer">
+                                <span class="text-xs text-primary font-bold uppercase">NBA</span>
+                                <h4 class="font-semibold text-sm group-hover:text-primary transition-colors line-clamp-2">Zion Williamson undergoes surgery, out indefinitely</h4>
+                                <span class="text-xs text-slate-500 dark:text-slate-400">12 mins ago</span>
+                            </div>
+                            <!-- Trending Item 2 -->
+                            <div class="group cursor-pointer">
+                                <span class="text-xs text-primary font-bold uppercase">Soccer</span>
+                                <h4 class="font-semibold text-sm group-hover:text-primary transition-colors line-clamp-2">Champions League: Semifinal matchups finalized after late goals</h4>
+                                <span class="text-xs text-slate-500 dark:text-slate-400">45 mins ago</span>
+                            </div>
+                            <!-- Trending Item 3 -->
+                            <div class="group cursor-pointer">
+                                <span class="text-xs text-primary font-bold uppercase">Tennis</span>
+                                <h4 class="font-semibold text-sm group-hover:text-primary transition-colors line-clamp-2">Alcaraz dominates in straight sets to reach Madrid Open final</h4>
+                                <span class="text-xs text-slate-500 dark:text-slate-400">2 hours ago</span>
+                            </div>
+                            <!-- Trending Item 4 -->
+                            <div class="group cursor-pointer">
+                                <span class="text-xs text-primary font-bold uppercase">MLB</span>
+                                <h4 class="font-semibold text-sm group-hover:text-primary transition-colors line-clamp-2">Ohtani smashes two homers as Dodgers sweep the series</h4>
+                                <span class="text-xs text-slate-500 dark:text-slate-400">3 hours ago</span>
+                            </div>
+                        </div>
+                        <button class="w-full py-2 text-primary font-semibold text-sm hover:bg-primary/10 rounded transition-all">View All Headlines</button>
+                    </div>
+                </div>
+
+                <!-- NFL Section -->
+                <section class="space-y-4">
+                    <div class="flex justify-between items-end border-b-2 border-primary/20 pb-2">
+                        <h2 class="text-2xl font-bold flex items-center gap-2">
+                            <span class="w-1.5 h-6 bg-primary rounded-full"></span> NFL
+                        </h2>
+                        <a class="text-primary text-sm font-semibold flex items-center gap-1" href="#">NFL Hub <span class="material-icons text-xs">open_in_new</span></a>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                        <div class="group cursor-pointer">
+                            <div class="aspect-video rounded-xl overflow-hidden mb-3">
+                                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBordZs6ffsIOmJ3_6Pd-AdDNbeo6wortI5bMPP_bXlBrlxqAisFRJ4p4HREtHvaO2SXrHmLX5HKN5tTKTQ03k2TFJRFaHjUz-aNxiWeD0okPoYz75yzehdjsmOwgn4blCeESs7dNL23n1kmcjRp9VCZyNFAmP42Ff2nDnZIiAS7d9XzQweT9MdJTqIwWqqkbFQpdD7R46nAIXmwF2Fu_DRf7zf3CMx7Djejb7ObZdg2nzB72fv4BAb-GtaThAObHBY1bihQj-DrcyG" alt="Football players colliding during a game"/>
+                            </div>
+                            <h3 class="font-bold leading-tight group-hover:text-primary transition-colors">Why the Cowboys' silent free agency is a gamble</h3>
+                        </div>
+                        <div class="group cursor-pointer">
+                            <div class="aspect-video rounded-xl overflow-hidden mb-3">
+                                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2jpkHJTnEvR0SpLjH93uGlnefGwj5Dp5D22XO0O_-Mfsa95y1UkKC7ZVPSj6OxfNmICJuAvpX9TWnIiq7fZk94-jceo4JKZOwpGlqeb9svN4LL4plw_3FW4BAWKe0njp6MvqLufjYnE8lw8razO4Z7sEjAhwkxBzybNZgTqdlN49-erxBW-WtxXr9m0W1V_qtt6mHXM3mriA5ur3Nttv6Zp1gAAvC4qf-H403qREYKjlPHU4Cyumu6VuFaL4fFNqgvEImzYixldh0" alt="NFL coach talking to quarterback on sideline"/>
+                            </div>
+                            <h3 class="font-bold leading-tight group-hover:text-primary transition-colors">Post-Draft Power Rankings: Who moved into the Top 5?</h3>
+                        </div>
+                        <div class="group cursor-pointer">
+                            <div class="aspect-video rounded-xl overflow-hidden mb-3">
+                                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCc7bEtYdwBN6nFqzvrIK4rGMqF2VYW07svwRosVTBzovh_PKDHGMDTcEb9CHLvT157dcH1QxOFLaO8EDhGv5_9nInq0Xr6zkCaGApQW7Noc4t-h1hyKj3346YMmDWQXyH3t0pzmAkJQfRnCaAuTWAr1e08oJBplSnDw00L2yon0i0lAcRyxhXhUMiH-2fhQdzv0LUB-2oj5UIpx51_foaJIiQULSPYtR29CxImOpgwrU0jt-ux7rubZG0crG0CfJlZBkrpJnVS_LYI" alt="Empty football stadium lights at night"/>
+                            </div>
+                            <h3 class="font-bold leading-tight group-hover:text-primary transition-colors">Rumors: Star Wide Receiver requesting trade?</h3>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Soccer Section -->
+                <section class="space-y-4">
+                    <div class="flex justify-between items-end border-b-2 border-primary/20 pb-2">
+                        <h2 class="text-2xl font-bold flex items-center gap-2">
+                            <span class="w-1.5 h-6 bg-primary rounded-full"></span> Soccer
+                        </h2>
+                        <a class="text-primary text-sm font-semibold flex items-center gap-1" href="#">Soccer Hub <span class="material-icons text-xs">open_in_new</span></a>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                        <div class="group cursor-pointer">
+                            <div class="aspect-video rounded-xl overflow-hidden mb-3">
+                                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEomyFzBMgrtAq6An3Gam_yLedJRei7eqasbJavpPPi5YMGM8SYcNDt0ep_ZABpUGGGjdlkXWOuOq8BhySzM5mELJc2sQrx23D1PT4NkujwKlyWxiwbKR-BliX5JGkyM9ccOeWFk00Cgzeli1Nz4s-kqW1tdVIpdrrBhhvk9MROLzcq5Sw-4mStTuP9tiwhqWJQZyFdwtoJa5IpTyUF9-svMpHiaa8rpbnoQfcRWCkjIOrDidIGgVFAwGbDtlio08enkTZZ65i1QEM" alt="Soccer ball hitting the back of the net"/>
+                            </div>
+                            <h3 class="font-bold leading-tight group-hover:text-primary transition-colors">Premier League Title Race: Analyzing the final 4 fixtures</h3>
+                        </div>
+                        <div class="group cursor-pointer">
+                            <div class="aspect-video rounded-xl overflow-hidden mb-3">
+                                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0N4bF9HeB4dKesu_2NjpinDmm-FVqUGljWZrIzKEQcjK17EBngdYW1lu3PJUOUr4KNIWfWH-v8FLpypYpPlHWPcIKKuVh1jesGeiVDGI-JIg7i6iJybvEvmVqyxCoV8kf_XHr88lVdtoxNeZ6Zj5LuIEmb8YGvgtURnh9708lb5f2YGyTV10CMgI3sKpo14yt5u8br4GKx5133BrESB7i_qIArX-L2AdXs083kyc41Cl-d3Xc-ymOjFthXcdPlAAocEuudlxc4CLY" alt="Soccer fans cheering in a crowded stadium"/>
+                            </div>
+                            <h3 class="font-bold leading-tight group-hover:text-primary transition-colors">Liverpool manager shortlist narrows to three names</h3>
+                        </div>
+                        <div class="group cursor-pointer">
+                            <div class="aspect-video rounded-xl overflow-hidden mb-3">
+                                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0OunAwIAlVynPQt1ZDrOggLrqJjf9vmZ2b2hVF5WpbEi92BExHBvZVPNppp1CzS0sYBC6BBEEZwY4oqTApyiWbKQg6vnaZB9irSpvC0AiPt9s1s4yGbIYzsn7UoHiVDN4GlqIqye2zxFD2kk0rGO71vZZP8MWTiDDrtDeTGZCRLhK4t9ctnLJvVPDiZ6qrAKgidlXnSjOft9yAMXtKyKUbIqpBCAPz5HL-hjdENobWoZXTbQ0_I-cpYBANu7d0qGY2oggBjQB3xaV" alt="Tactical soccer board with player magnets"/>
+                            </div>
+                            <h3 class="font-bold leading-tight group-hover:text-primary transition-colors">How 'New Tactics' are revitalizing Italian football</h3>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Sidebar: Live Scores -->
+            <aside class="col-span-12 lg:col-span-3 space-y-6">
+                <div class="bg-white dark:bg-card-dark rounded-xl p-4 shadow-sm border border-slate-200 dark:border-primary/10">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="font-bold text-lg flex items-center gap-2">
+                            <span class="material-icons text-red-500 text-sm">pumping_station</span> Live Scores
+                        </h3>
+                        <div class="flex gap-2">
+                            <button class="w-6 h-6 rounded bg-primary/10 text-primary flex items-center justify-center">
+                                <span class="material-icons text-xs">chevron_left</span>
+                            </button>
+                            <button class="w-6 h-6 rounded bg-primary/10 text-primary flex items-center justify-center">
+                                <span class="material-icons text-xs">chevron_right</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Scores List -->
+                    <div class="space-y-4">
+                        <!-- Score Card 1 (Soccer) -->
+                        <div class="p-3 bg-slate-50 dark:bg-background-dark/50 rounded-lg border border-slate-100 dark:border-primary/5">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Premier League • 72'</span>
+                                <span class="flex items-center gap-1.5">
+                                    <span class="w-1.5 h-1.5 bg-red-500 rounded-full"></span>
+                                    <span class="text-[10px] font-bold text-red-500 uppercase">Live</span>
+                                </span>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex justify-between items-center">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-5 h-5 bg-red-600 rounded-full flex items-center justify-center text-[8px] font-bold text-white">ARS</div>
+                                        <span class="text-sm font-medium">Arsenal</span>
+                                    </div>
+                                    <span class="text-lg font-extrabold">2</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-5 h-5 bg-blue-800 rounded-full flex items-center justify-center text-[8px] font-bold text-white">MNC</div>
+                                        <span class="text-sm font-medium">Man City</span>
+                                    </div>
+                                    <span class="text-lg font-extrabold">1</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Score Card 2 (NBA) -->
+                        <div class="p-3 bg-slate-50 dark:bg-background-dark/50 rounded-lg border border-slate-100 dark:border-primary/5">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">NBA • 4th Qtr 0:45</span>
+                                <span class="flex items-center gap-1.5">
+                                    <span class="w-1.5 h-1.5 bg-red-500 rounded-full"></span>
+                                    <span class="text-[10px] font-bold text-red-500 uppercase">Live</span>
+                                </span>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex justify-between items-center">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-5 h-5 bg-yellow-500 rounded-full flex items-center justify-center text-[8px] font-bold text-purple-900">LAL</div>
+                                        <span class="text-sm font-medium">Lakers</span>
+                                    </div>
+                                    <span class="text-lg font-extrabold text-primary">108</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-5 h-5 bg-blue-900 rounded-full flex items-center justify-center text-[8px] font-bold text-white">GSW</div>
+                                        <span class="text-sm font-medium">Warriors</span>
+                                    </div>
+                                    <span class="text-lg font-extrabold">105</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Score Card 3 (Scheduled) -->
+                        <div class="p-3 bg-slate-50 dark:bg-background-dark/50 rounded-lg border border-slate-100 dark:border-primary/5">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">MLB • Today 7:00 PM</span>
+                            </div>
+                            <div class="space-y-2 opacity-75">
+                                <div class="flex justify-between items-center">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-5 h-5 bg-navy-900 rounded-full flex items-center justify-center text-[8px] font-bold text-white">NYY</div>
+                                        <span class="text-sm font-medium">Yankees</span>
+                                    </div>
+                                    <span class="text-sm font-medium text-slate-400">-</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-5 h-5 bg-red-700 rounded-full flex items-center justify-center text-[8px] font-bold text-white">BOS</div>
+                                        <span class="text-sm font-medium">Red Sox</span>
+                                    </div>
+                                    <span class="text-sm font-medium text-slate-400">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="w-full mt-4 py-2 border border-primary/20 hover:bg-primary hover:text-white text-primary text-xs font-bold rounded-lg transition-all uppercase tracking-widest">View All Scores</button>
+                </div>
+                <!-- Featured Podcast Widget -->
+                <div class="bg-gradient-to-br from-primary to-blue-700 rounded-xl p-5 text-white shadow-lg overflow-hidden relative">
+                    <div class="relative z-10">
+                        <span class="text-[10px] font-bold bg-white/20 px-2 py-0.5 rounded uppercase mb-2 inline-block">Featured Podcast</span>
+                        <h4 class="text-xl font-bold mb-2">Inside the Huddle</h4>
+                        <p class="text-white/80 text-xs mb-4">Draft fallout and winners with special guest Tony Romo.</p>
+                        <button class="flex items-center gap-2 bg-white text-primary px-4 py-2 rounded-lg font-bold text-sm">
+                            <span class="material-icons text-lg">play_arrow</span> Listen Now
+                        </button>
+                    </div>
+                    <span class="material-icons absolute -right-4 -bottom-4 text-white/10 text-9xl">podcasts</span>
+                </div>
+                <!-- Newsletter Signup -->
+                <div class="bg-white dark:bg-card-dark rounded-xl p-5 shadow-sm border border-slate-200 dark:border-primary/10">
+                    <h3 class="font-bold text-lg mb-2">The Daily Bizz</h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">Get the best of sports news delivered to your inbox every morning.</p>
+                    <div class="space-y-3">
+                        <input class="w-full px-4 py-2 rounded-lg bg-slate-50 dark:bg-background-dark border-slate-200 dark:border-primary/20 focus:ring-primary text-sm" placeholder="Email address" type="email"/>
+                        <button class="w-full bg-primary text-white font-bold py-2 rounded-lg text-sm">Subscribe</button>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Video Highlights Grid -->
+        <section class="mt-12 space-y-4">
+            <div class="flex justify-between items-end border-b-2 border-primary/20 pb-2">
+                <h2 class="text-2xl font-bold flex items-center gap-2">
+                    <span class="material-icons text-primary">play_circle</span> Video Highlights
+                </h2>
+                <a class="text-primary text-sm font-semibold flex items-center gap-1" href="#">Watch More <span class="material-icons text-xs">arrow_forward</span></a>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Video Item 1 -->
+                <div class="group cursor-pointer">
+                    <div class="relative aspect-video rounded-xl overflow-hidden mb-3">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKB10eniTF7KzIXuHyVXGwB9JH0VFN6VxnYOSyROoO6Nah5aIGSqDcIBxmPVZRlxouDykOgAwPSKD8e6_GaJPoWnpRdnn5QgqgIZg1EVv3w2CJmCvFZ9P2sl8FjIWy002QkwI7j5xjKdXn2vhhUsP51Dz2ZrlNODTe3vpQ7XxtFlKm-lL2iV9jO0Iv1YHEbMGNyMfsClx3CtdbYxOaO5MSMBFLs1QLQ21FZA9SFuEa1rWhQvhony93-pyWRy180_3ut5u0f8doNulN" alt="Basketball player dunking in slow motion"/>
+                        <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <span class="material-icons text-white text-5xl">play_circle_filled</span>
+                        </div>
+                        <div class="absolute bottom-2 right-2 bg-black/80 text-white text-[10px] font-bold px-1.5 py-0.5 rounded">02:45</div>
+                    </div>
+                    <h3 class="font-bold text-sm leading-tight group-hover:text-primary transition-colors">Top 10 Dunks from the NBA Playoffs Round 1</h3>
+                </div>
+                <!-- Video Item 2 -->
+                <div class="group cursor-pointer">
+                    <div class="relative aspect-video rounded-xl overflow-hidden mb-3">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB93PO_K3CvjK2Tp5YTSb_VLGYo046iRiWCeGNoaK0I4LTRPbnt62v7SB6pfpxgfP90ecaE6XwvVOHi3pbv4v_76I4ctHFGXsHX7kYNXnrcxsV-pqozydg1ohDTf55Y-DRNWojT5d1CWSfTWbBI6kqQGLt6B8KJ5GvwjNOFxaZOWEqXJyYv8nA0LQ2RgcD9c-DBRQlAhPWzXlTu-opS5UipXnZsjH0vuHFUaZwUgS12e_VZFluCPHRglCL3bjotKt17RrwuFNQsk9NW" alt="Soccer game penalty kick moment"/>
+                        <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <span class="material-icons text-white text-5xl">play_circle_filled</span>
+                        </div>
+                        <div class="absolute bottom-2 right-2 bg-black/80 text-white text-[10px] font-bold px-1.5 py-0.5 rounded">05:12</div>
+                    </div>
+                    <h3 class="font-bold text-sm leading-tight group-hover:text-primary transition-colors">Every Goal: Manchester Derby Thriller Highlights</h3>
+                </div>
+                <!-- Video Item 3 -->
+                <div class="group cursor-pointer">
+                    <div class="relative aspect-video rounded-xl overflow-hidden mb-3">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0B2mhpj-ZbXsSLiyC1w26eN-XeO7-AzKU1mG7SYTKa_NW9ztCcxzYwt6h30s9F7g60LxZsjUqK0-_HJ5r-vQ8VfAvBK4zYkBJbkGcvNscjlXzhZs-QIdveNo8nVkLp6obrDznYOP29xSnAhcVlU91_jZnK-vtjsOafSeTyXKPnEUypPzQKqnXE5w-nJ1-euFx6wdIP98Mr60AnnFN5Kr6LTWrrMTVYeyP4uqL54I24MJmWq1_-jxoqyDGsAJqIXO3rgzpVR8BgQVs" alt="Baseball player hitting a home run"/>
+                        <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <span class="material-icons text-white text-5xl">play_circle_filled</span>
+                        </div>
+                        <div class="absolute bottom-2 right-2 bg-black/80 text-white text-[10px] font-bold px-1.5 py-0.5 rounded">03:30</div>
+                    </div>
+                    <h3 class="font-bold text-sm leading-tight group-hover:text-primary transition-colors">Walk-off Magic: Dodgers clinch series in dramatic fashion</h3>
+                </div>
+                <!-- Video Item 4 -->
+                <div class="group cursor-pointer">
+                    <div class="relative aspect-video rounded-xl overflow-hidden mb-3">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-yNrv9Jde84dhfDhLxW02g_Gi-DxpbxG63ZlwrLhele9NjPtsGZhi9pSeFjuk8fTG9A8_mGqzl9DAqR-QM2wHMLVO2KHQmlThdakZDX38cOBdyqzN_r-AcboqLXAhDx5Kf4WV_Hn5a_rh8cQwvKNaxFhflB6ZDiC_Fr8tv3uSnSTTwqsxtRF864tXOKzrtcM-25u-jhCn4po1ddfmnF3fLGnyPVNrtXdkOag-6QGJUtVbbv0AhutBefCxMWr92uByWfxLxCPg3l7M" alt="Race car at high speed on track"/>
+                        <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <span class="material-icons text-white text-5xl">play_circle_filled</span>
+                        </div>
+                        <div class="absolute bottom-2 right-2 bg-black/80 text-white text-[10px] font-bold px-1.5 py-0.5 rounded">04:20</div>
+                    </div>
+                    <h3 class="font-bold text-sm leading-tight group-hover:text-primary transition-colors">F1: Monaco GP Intense Final Lap Battle</h3>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-card-dark border-t border-slate-200 dark:border-primary/20 mt-12 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Brand -->
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-6 h-6 bg-primary rounded flex items-center justify-center">
+                            <span class="material-icons text-white text-sm">sports_score</span>
+                        </div>
+                        <span class="text-xl font-800 tracking-tight text-primary">SPORT<span class="text-slate-900 dark:text-white">BIZZ</span></span>
+                    </div>
+                    <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Your ultimate source for real-time sports coverage, scores, and expert analysis.</p>
+                    <div class="flex gap-4">
+                        <a class="w-8 h-8 rounded-full bg-slate-100 dark:bg-background-dark flex items-center justify-center text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="#">
+                            <span class="material-icons text-sm">facebook</span>
+                        </a>
+                        <a class="w-8 h-8 rounded-full bg-slate-100 dark:bg-background-dark flex items-center justify-center text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="#">
+                            <span class="material-icons text-sm">alternate_email</span>
+                        </a>
+                        <a class="w-8 h-8 rounded-full bg-slate-100 dark:bg-background-dark flex items-center justify-center text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="#">
+                            <span class="material-icons text-sm">smart_display</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Links -->
+                <div>
+                    <h4 class="font-bold mb-4 uppercase text-xs tracking-widest text-slate-400">Leagues</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a class="hover:text-primary" href="#">NFL</a></li>
+                        <li><a class="hover:text-primary" href="#">NBA</a></li>
+                        <li><a class="hover:text-primary" href="#">MLB</a></li>
+                        <li><a class="hover:text-primary" href="#">Premier League</a></li>
+                        <li><a class="hover:text-primary" href="#">Champions League</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 uppercase text-xs tracking-widest text-slate-400">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a class="hover:text-primary" href="#">About Us</a></li>
+                        <li><a class="hover:text-primary" href="#">Careers</a></li>
+                        <li><a class="hover:text-primary" href="#">Advertise</a></li>
+                        <li><a class="hover:text-primary" href="#">Privacy Policy</a></li>
+                        <li><a class="hover:text-primary" href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 uppercase text-xs tracking-widest text-slate-400">Help</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a class="hover:text-primary" href="#">Support Center</a></li>
+                        <li><a class="hover:text-primary" href="#">Community Guidelines</a></li>
+                        <li><a class="hover:text-primary" href="#">Feedback</a></li>
+                        <li><a class="hover:text-primary" href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-slate-200 dark:border-primary/10 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-xs text-slate-500 dark:text-slate-400">© 2024 SportBizz Media Group. All rights reserved.</p>
+                <div class="flex gap-6 text-xs text-slate-500 dark:text-slate-400">
+                    <span>Part of the BizzNetwork</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="/main.js"></script>
+</body>
+</html>
